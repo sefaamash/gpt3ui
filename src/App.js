@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+//In this project for small component we make in component and call directly in App.js file
+//And for components which has large no of componets inside it we take it as container which has large components so we make components and call it inside a container for better code and file structure
+import "./App.css";
+import {
+  Footer,
+  Blog,
+  Possibility,
+  Features,
+  WhatGPT3,
+  Header,
+  Feature,
+} from "./containers";
+import { CTA, Brand, Navbar } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="gradient__bg">
+        <Navbar />
+        <Header />
+      </div>
+      <Brand />
+      <WhatGPT3 />
+      <Feature />
+      <Possibility />
+      <CTA />
+      <Blog />
+      <Footer />
     </div>
   );
 }
